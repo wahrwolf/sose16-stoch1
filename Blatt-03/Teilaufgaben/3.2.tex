@@ -1,18 +1,18 @@
-Die Verteilung der einzelnen Wahrscheinlichkeinten ergibt sich wie in der ersten Tabelle dargestellt:
+\textbf{Hausübung 3.2} (Archäologie, 10 Punkte).\\
+Laut Aufgabenstellung ist folgende Tabelle mit Wahrscheinlichkeitsmaßen gegeben, mit $R=Reis, P=Peking-Ente$ und $B=Brokkoli$:\\
 
 \begin{tabular}{|c|c|c|c|c|c|c|c|}
-	\hline
-	B & $\neg$ B & R & $\neg$ R & P & $\neg$ P  \\ \hline
-	$\frac{1}{4}$ &$\frac{3}{4}$ & $\frac{4}{5}$ &$\frac{1}{5}$ & $\frac{1}{2}$ &$\frac{1}{2}$ \\
-	\hline
+		\hline $A$ & $\{R\}$ & $\{P\}$ & $\{B\}$ & $\{R, P\}$ & $\{R, B\}$ & $\{P, B\}$ & $\{R, P, B\}$ \\
+		\hline $P(A)$ & $\frac{4}{5}$ & $\frac{1}{2}$ & $\frac{1}{4}$ & $\frac{9}{20}$ & $\frac{3}{20}$ & $\frac{1}{20}$ & $\frac{1}{20}$\\
+		\hline
 \end{tabular}
 
-
-Die genue Aufteilung lässt sich wie unten beschreiben:
-\begin{tabular}{c|c|c|c|c|c}
-  	  	& \multicolumn{2}{ c} {B } & \multicolumn{2}{ c} {$ \neg$ B } & $\Sigma $ \\ \hline
-		& P 		 & $\neg$P 	& P 		& $\neg$ P \\
-	 R	& $\frac{1}{20}$ &$\frac{}{}$  &$\frac{}{}$  &$\frac{}{}$ &\\
-	$\neg$R & $\frac{}{}$ 	 &$\frac{}{}$  &$\frac{}{}$  &$\frac{}{}$ &\\
-	$\Sigma$& 
-\end{tabular}
+Die Wahrscheinlichkeit, dass wenigstens eine der drei Zutaten enthalten ist, berechnet sie wie folgt:\\
+\begin{equation*}
+	\begin{split}
+	P(\{R\}\cup \{P\}  \cup \{B\}) = &P({R}) + P(\{P\}) + P(\{B\}) - P(\{R\}\cap \{P\}) - P(\{R\}\cap \{B\}) - \\
+	&P(\{P\}\cap \{B\}) + P(\{R\}\cap \{P\} \cap \{B\})\\
+	= &\frac{4}{5} + \frac{1}{2} +\frac{1}{4} - \frac{9}{20} - \frac{3}{20} - \frac{1}{20} + \frac{1}{20}\\
+	= &\frac{19}{20}
+	\end{split}
+\end{equation*}
