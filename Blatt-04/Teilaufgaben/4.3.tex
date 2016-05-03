@@ -1,0 +1,47 @@
+\textbf{Hausübung 4.3} (Zwei Wahrscheinlichkeitsmaße, 8 Punkte).\\
+\\
+Es sei $\Omega \neq \emptyset$ eine diskrete Menge, $P,Q:2^\Omega \rightarrow \mathbb{R}$ seinen zwei Wahrscheinlichkeitsmaße, dann gilt:\\
+\begin{equation*}
+	\begin{split}
+		0 \leq P(A) \leq 1 \text{, für alle } A \subset \Omega
+	\end{split}
+\end{equation*}
+und
+\begin{equation*}
+	\begin{split}
+		0 \leq Q(A) \leq 1 \text{, für alle } A \subset \Omega.
+	\end{split}
+\end{equation*}
+Sei $\alpha \in [0,1]$ dann folgt mit $\alpha \leq 1$ und $(1-\alpha)\leq 1$:
+\begin{equation}\label{P}
+	\begin{split}
+		\alpha \cdot 0 &\leq \alpha P(A) \leq \alpha \cdot 1\\
+		\Rightarrow 0 &\leq \alpha P(A) \leq \alpha
+	\end{split}
+\end{equation}
+und
+\begin{equation}\label{Q}
+	\begin{split}
+		(1-\alpha) \cdot 0 &\leq (1-\alpha) Q(A) \leq (1-\alpha) \cdot 1\\
+		\Rightarrow 0 &\leq (1-\alpha) Q(A) \leq (1-\alpha)
+	\end{split}
+\end{equation}
+Die Addition der Ungleichungen \eqref{P} und \eqref{Q} ergibt:
+\begin{equation*}
+	\begin{split}
+		0 &\leq \alpha P(A) + (1-\alpha) Q(A)\leq \alpha + (1-\alpha)\\
+		&\Rightarrow 0 \leq \alpha P(A) + (1-\alpha) Q(A)\leq 1
+	\end{split}
+\end{equation*}
+Zudem gilt für die $\sigma$-Additivität:
+\begin{equation*}
+	\begin{split}
+		R\big(\bigcup\limits_{n=1}^{\infty} A_{n}\big) = \sum_{\infty}^{n=1}R(A_{n}) = \alpha \sum_{\infty}^{n=1}P(A_{n}) + (1-\alpha)\sum_{\infty}^{n=1}Q(A_{n})
+	\end{split}
+\end{equation*}
+Da $P$ und $Q$ jeweils $\sigma$-additiv sind, ist auch $R$ $\sigma$-additiv.
+Damit handelt es sich bei $ R(A) := P(A) + (1-\alpha) Q(A)$ ebenfalls um ein Wahrscheinlichkeitsmaß. $ \square $\\
+Sei $\alpha \notin [0,1]$ dann gilt dies nicht, da für beispielsweise $P(A) = 1$, $Q(A) = 0 $ und $\alpha = 1,5$ folgt:
+\begin{equation*}
+	1,25 \cdot 1 + (-0,25) \cdot 0 = 1,25 \nleq 1
+\end{equation*} 
