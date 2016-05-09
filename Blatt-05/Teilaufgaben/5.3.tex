@@ -1,0 +1,14 @@
+Gemäß \textbf{Definition 2.2.3} des Skriptes heißt ein Vektor Wahrscheinlichkeitsvektor, wenn sowohl die Nichtnegativität als auch die Normiertheit gilt.\\
+\\
+Für die Nichtnegativität muss gelten, $\forall k \in \{1,\dots,n\}: p_k \ge 0$ mit $p_k = c \cdot k$. Da $k \ge 1$, muss auch $c\ge 0$.\\
+\\
+Damit der Vektor normiert ist, muss gelten: $\sum_{k=1}^{n}p_k = 1$. Mit $(p_k)_{k=1}^{n}$ folgt:
+\begin{equation*}
+	\begin{split}
+		&\sum_{k=1}^{n}p_k = \sum_{k=1}^{n} c \cdot k = c \cdot \sum_{k=1}^{n} k = 1\\
+		&c \cdot \frac{1}{2}n(n+1) = 1\\
+		&c = \frac{2}{n(n+1)}
+	\end{split}
+\end{equation*}
+Da $n\in\{1,\dots,n\} \ge 1$, ist sowohl die Normiertheit als auch die Nichtnegativität gegeben.
+
