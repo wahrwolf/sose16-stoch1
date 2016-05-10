@@ -1,0 +1,23 @@
+\begin{enumerate}
+	\item[a)] 
+		\begin{equation*}
+			\begin{split}
+				P(X \leq 2) &= \sum_{k=0}^{2} \text{Hg}_{8,70,1000}\\
+				& = \frac{{70 \choose 0} \cdot {1000 - 70 \choose 8 - 0}}{{1000\choose 8}} 
+				+ \frac{{70 \choose 1} \cdot {1000 - 70 \choose 8 - 1}}{{1000\choose 8}}
+				+ \frac{{70 \choose 2} \cdot {1000 - 70 \choose 8 - 2}}{{1000\choose 8}} \\
+				& \approx 0.985734
+			\end{split}
+		\end{equation*}
+	\item[b)]
+		\begin{equation*}
+			\begin{split}
+				P(X \leq 2) & = \sum_{k = 0}^{2} \text{Bin}_{8, 0.07}\\
+				& = {8 \choose 0} 0.07^{0}\cdot (1-0.07)^{8-0} 
+				+ {8 \choose 1} 0.07^{1}\cdot (1-0.07)^{8-1} \\ 
+				&+ {8 \choose 2} 0.07^{2}\cdot (1-0.07)^{8-2} \\
+				& \approx 0.985301
+			\end{split}
+		\end{equation*}
+		Die Approximation der hypergeometrischen Verteilung ist für Versuche, mit einer geringen Anzahl an möglichen Ereignissen, geeignet, da die Schätzung für die ersten Nachkommastellen relativ genau ausfällt. Für Experimente mit einer hohen Anzahl an Ereignissen und einer geringen relativen Wahrscheinlichkeit für die einzelnen Ereignisse, fällt die Approximation ungenau aus.
+\end{enumerate}
