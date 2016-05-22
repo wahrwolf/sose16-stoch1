@@ -1,0 +1,22 @@
+\begin{equation*}
+	\begin{split}
+			Var(Z) 	&= E(Z^2) - E(Z)^2 \\
+					&= \sum_{k=0}^{\infty} k^2 \cdot P(Z = k) - E(Z)^2\\
+					&= \sum_{k=0}^{\infty} k^2 \cdot \frac{\lambda^{k}}{k!} \cdot e^{-\lambda} - \lambda^2\\
+					&= 0 + \sum_{k=1}^{\infty} k^2\cdot\frac{\lambda^{k}}{k!}\cdot e^{-\lambda} - \lambda^2\\
+					&= \sum_{k=1}^{\infty}k^2\cdot\frac{\lambda^k}{k!}\cdot e^{-\lambda} - \lambda^2\\
+					&= \sum_{k=1}^{\infty}k^2\cdot\frac{\lambda^k}{k\cdot (k-1)!}\cdot e^{-\lambda} - \lambda^2\\
+					&= \sum_{k=1}^{\infty}k\cdot\frac{\lambda^k}{(k-1)!}\cdot e^{-\lambda} - \lambda^2\\
+					&= \sum_{k=0}^{\infty}(k+1)\cdot\frac{\lambda^{k+1}}{k!} \cdot e^{-\lambda} - \lambda^2\\
+					&= \lambda \cdot \sum_{k=0}^{\infty} (k+1) \cdot \frac{\lambda^k}{k!} \cdot e^{-\lambda} - \lambda^2\\
+					&= \lambda \cdot \sum_{k=0}^{\infty} k \cdot \frac{\lambda^k}{k!}\cdot e^{-\lambda} + \lambda \cdot \sum_{k=0}^{\infty} \frac{\lambda^k}{k!} \cdot e^{-\lambda} - \lambda^2
+	\end{split}
+\end{equation*}
+Mit $\sum_{k=0}^{\infty} k \cdot \frac{\lambda^k}{k!}\cdot e^{-\lambda} = E(Z) = \lambda$ und $\sum_{k=0}^{\infty} \frac{\lambda^k}{k!}\cdot e^{-\lambda} = 1$ (Normiertheit) folgt:
+\begin{equation*}
+	\begin{split}
+		Var(Z) 		&= \lambda \cdot \underbrace{\sum_{k=0}^{\infty}\lambda \cdot \frac{\lambda^k}{k!}\cdot e^{-\lambda}}_{= E(Z) = \lambda} + \lambda \cdot \underbrace{ \sum_{k=0}^{\infty}\frac{\lambda^k}{k!}\cdot e^{-\lambda}}_{= 1} - \lambda^2\\
+					&= \lambda \cdot \lambda + \lambda \cdot 1 - \lambda^2\\
+					&= \lambda
+	\end{split}
+\end{equation*}
