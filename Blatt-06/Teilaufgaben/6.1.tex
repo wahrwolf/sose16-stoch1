@@ -1,11 +1,34 @@
 \begin{enumerate}
-	\item Der Erwartungswert für den 'einfachen' Roulettefall setzt sich aus folgenden Bestandteilen zusammen:
+	\item[a)] Der erwartete Gewinn im ''einfachen'' Roulettespiel wird wie folgt berechnet:
+	%Der Erwartungswert für den 'einfachen' Roulettefall setzt sich aus folgenden Bestandteilen zusammen:
 	\begin{itemize}
-		\item Für Rot und Schwarz gitl jeweils eine Wahrscheinlichkeit von $\frac{18}{36} $
-		\item daher berechnet sich die erwartete Auszahlung mit: $2n \cdot \frac{18}{37}=n\cdot \frac{36}{37} $
-		\item bei einem Einsatz von $n$ ergibt das einen Erwarungswert von: $n\cdot \frac{36}{37} - n = -\frac{1}{37}$, also einen Verlust von etwa 0.03 Geldeinheiten pro Spiel
+		\item Für Rot und Schwarz gilt jeweils eine Wahrscheinlichkeit von $\frac{18}{37} $
+		\item Für die grüne Null gilt eine Wahrscheinlichkeit von $\frac{1}{37}$
+		\item Da nur auf ''rot'' oder ''schwarz'' gesetzt wird, beträgt die Auszahlung im Erfolgsfall: $n \cdot \frac{18}{37}$
+		\item Im Falle eines Misserfolges beträgt der Verlust: $ n \cdot (\frac{18}{37}+\frac{1}{37})$
+		\item Daraus ergibt sich ein erwarteter Gewinn von: $ n \cdot \frac{18}{37} - n \cdot (\frac{18}{37}+\frac{1}{37}) = -\frac{1}{37}n$
+		
+		%\item daher berechnet sich die erwartete Auszahlung mit: $2n \cdot \frac{18}{37}=n\cdot \frac{36}{37} $
+		%\item bei einem Einsatz von $n$ ergibt das einen Erwarungswert von: $n\cdot \frac{36}{37} - n = -\frac{1}{37}$, also einen Verlust von etwa 0.03 Geldeinheiten pro Spiel
 	\end{itemize}
-	\item Der Erwartungswert mit dem Setzten von $k$ Zahlen berechnet sich mit: $n\cdot\frac{36}{k} \cdot \frac{k}{37} -n=-\frac{1}{37}$
-	\item \#TODO
+	\item[b)] Der erwartete Gewinn im ''allgemeinen'' Roulettespiel berechnet sich wie folgt:
+	\begin{itemize}
+		\item Für die Gruppe von Zahlen (aus ''rot'' und ''schwarz''), die gesetzt werden, gilt die Wahrscheinlichkeit $\frac{k}{37}$
+		\item Für die Gruppe von Zahlen (aus ''rot'' und ''schwarz''), die nicht gesetzt werden, gilt entsprechend $\frac{36-k}{37}$
+		\item Die Wahrscheinlichkeit für die ''grüne Null'', die nicht gesetzt werden kann, gilt weiterhin $\frac{1}{37}$
+		\item Die Auszahlung im Erfolgsfall beträgt $n\cdot (\frac{36}{k}-1)\cdot \frac{k}{37}$
+		\item Der Verlust im Falle des Misserfolges beträgt $n\cdot (\frac{36-k}{37}+\frac{1}{37})$
+		\item Der erwartete Gewinn beträgt somit:
+		\begin{equation*}
+			\begin{split}
+				E(G)	&= n\cdot (\frac{36}{k}-1)\cdot \frac{k}{37} - n\cdot (\frac{36-k}{37}+\frac{1}{37})\\
+						&= \frac{36}{37}n - \frac{k}{37}n - \frac{36}{37}n + \frac{k}{37}n - \frac{1}{37}n\\
+						&= \frac{1}{37}n
+			\end{split}
+		\end{equation*}
+	\end{itemize}
+	
+	%Der Erwartungswert mit dem Setzten von $k$ Zahlen berechnet sich mit: $n\cdot\frac{36}{k} \cdot \frac{k}{37} -n=-\frac{1}{37}$
+	\item[c)] Der Erwartungswert des Gewinns hängt somit nur von $n$ ab, mit der Wahrscheinlichkeit von $1/37$, dass die ''grüne Null'' getroffen wird. Da die ''grüne Null'' nicht gesetzt werden kann, ist der Gewinn negativ. Der Erwartungswert ist von unabhängig von $k$.
 
 \end{enumerate}
