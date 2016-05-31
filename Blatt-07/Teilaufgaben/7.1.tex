@@ -1,0 +1,9 @@
+Für die Berechnung von P gilt:
+  \[ P(Z=k) = P(Z=-k) = \frac{1}{2k(k+1)} =  \frac{1}{k(k+1)} - \frac{1}{2k(k+1)} \] 
+Also gilt für den Erwatungswert:
+\[ \Sigma_{k=1}^{\infty}( \frac{1}{k(k+1)} - \frac{1}{2k(k+1)}) = \Sigma_{k=1}^{\infty}( \frac{1}{k} \cdot \frac{1}{k+1} ) - \Sigma_{k=1}^{\infty}(\frac{1}{2k} \cdot \frac{1}{(k+1) }) \]
+Da beide Summanden harmonische Reihen sind gilt mit \( \Sigma_{k=1}^{\infty}(\frac{1}{k}) \to \infty \):
+\[ \Sigma_{k=1}^{\infty}( \frac{1}{k} \cdot \frac{1}{k+1} ) - \Sigma_{k=1}^{\infty}(\frac{1}{2k} \cdot \frac{1}{(k+1) }) \to \infty - \infty\]
+
+Dies zeigt das der Erwartungswert nicht berechnet werden kann.
+
