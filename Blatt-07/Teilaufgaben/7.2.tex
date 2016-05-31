@@ -1,0 +1,61 @@
+Die Zufallsvariable $X$ mit den  Werten der Menge $\{a,a+1,\dots,b\}$ sei gleichverteilt, d.h
+\begin{equation*}
+	P(X=k) = \frac{1}{b-a+1}, k=a  \dots,b.
+\end{equation*}
+
+\begin{enumerate}
+\item[a)]
+	\begin{equation*}
+		\begin{split}
+			E[Y = X-a]		 	&= \sum_{k = a}^{b} (k-a) \cdot \frac{1}{b-a+1}\\
+								&= \frac{1}{b-a+1} \cdot \sum_{k=0}^{b-a} k\\
+								&= \frac{1}{b-a+1} \cdot \frac{1}{2}(b-a)(b-a+1)\\
+								&= \frac{b-a}{2}\\
+			E[X]				&= \frac{b-a}{2}+a\\
+								&= \frac{a+b}{2}
+		\end{split}
+	\end{equation*}
+\item[b)]
+	\begin{equation*}
+		\begin{split}
+			Var[Y = X - a]    	&= E[Y^2] - E[Y]^2\\
+								&= \sum_{k=a}^{b} (k-a)^2 \cdot \frac{1}{b-a+1} - (\frac{b-a}{2})^2\\
+								&= \sum_{k=0}^{b-a} k^2 \cdot \frac{1}{b-a+1} - (\frac{b-a}{2})^2\\
+								&= \frac{1}{6}(b-a)(b-a+1)(2b-2a+1) \cdot \frac{1}{b-a+1} - (\frac{b-a}{2})^2\\
+								&= \frac{1}{6}(b-a)(2b-2a+1) - (\frac{b-a}{2})^2\\
+								&= \frac{1}{6}(2b^2-4ab+b+2a^2-a) - \frac{1}{4}(b^2-2ab+a^2)\\
+								&= \frac{1}{12}(4b^2-8ab+2b+4a^2-2a) - \frac{1}{12}(3b^2-6ab+3a^2)\\
+								&= \frac{1}{12}(b^2 - 2ab + 2b - 2a + a^2)\\
+								&= \frac{1}{12}(b-a+2)(b-a)\\
+								&= Var[X]
+		\end{split}
+	\end{equation*}
+\item[c)]
+	\begin{equation*}
+		\begin{split}
+			E[X]				&= \frac{a+b}{2}\\
+								&= \frac{1+6}{2}\\
+								&= \frac{7}{2}\\
+								&\approx 3.5\\
+			Var[X]				&= \frac{1}{12}(b-a+2)(b-a)\\
+								&= \frac{1}{12}(6-1+2)(6-1)\\
+								&= \frac{35}{12}
+		\end{split}
+	\end{equation*}
+	Die Ergebnisse für $E[X]$ und $Var[X]$ stimmen mit denen aus der Vorlesung überein. 
+\item[b)] Die Augensumme des $k$-ten Würfels wird um die Konstante $k$ erhöht. Damit ergibt sich eine Augensumme beim Würfel $k$ von $n+k-1$ für $n={1,\dots,6}$. Der Erwartungswert für die Augensumme $X_k$ lautet
+	\begin{equation*}
+		\begin{split}
+			E[X_k]				&= \sum_{n=1}^{6} \frac{n+k-1}{6}.\\
+		\end{split}
+	\end{equation*}
+Die Augensumme aller sechs Würfel mit $Z$ lautet
+	\begin{equation*}
+		\begin{split}
+			E[Z]				&= \sum_{k=1}^{6} E[X_k]\\
+								&= \frac{k}{6} + \frac{k+1}{6} + \dots + \frac{k+5}{6}\\
+								&= \frac{6k+15}{6}\\
+								&= \frac{2k+5}{2}.
+		\end{split}
+	\end{equation*}
+\end{enumerate}
