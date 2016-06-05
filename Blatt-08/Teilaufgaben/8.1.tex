@@ -1,0 +1,27 @@
+Im Folgenden werden die einzelnen Ereignisse und Wahrscheinlichkeiten definiert.
+\begin{itemize}
+	\item Das Ereignis $A$, dass eine Übertragung fehlerhaft ist, mit der Wahrscheinlichkeit: $P(A) = \frac{1}{100} = 0.01$
+	\item Entsprechend gilt für das Ereignis \glqq erfolgreiche Übertragung'' $A^c$ die Wahrscheinlichkeit:	$P(A^c) = \frac{99}{100} = 0.99$
+	\item Das Ereignis $B$ \glqq ein Übertragungsfehler wird ausgegeben'' und $B^c$ ist das Ereignis \glqq es wird kein Übertragungsfehler ausgegeben''
+	\item Die Wahrscheinlichkeit, dass ein Übertragungsfehler auch als Fehler erkannt wird beträgt: $P(B|A) = \frac{99}{100} = 0.99$
+	\item Die Wahrscheinlichkeit, dass eine korrekt übertragene Nachricht fälschlicherweise als fehlerhaft erkannt wird, beträgt: $P(B|A^c) = \frac{1}{1000} = 0.001$
+\end{itemize}
+\begin{enumerate}
+	\item[a)]
+	\begin{equation*}
+		\begin{split}
+			P(B) 	&= P(B|A) \cdot P(A) + P(B|A^c) \cdot P(A^c)\\
+					&= 0.99 \cdot 0.01 + 0.001 \cdot 0.99\\
+					&= 0.01089
+		\end{split}
+	\end{equation*}
+	\item[b)]
+	\begin{equation*}
+		\begin{split}
+			P(A^c|B)&= \frac{P(B|A^c)\cdot P(A^c)}{P(B)}\\
+					&= \frac{0.001 \cdot 0.01}{0.01089}\\
+					&= \frac{1}{1089}\\
+					&\approx 0.0009182736
+		\end{split}
+	\end{equation*}
+\end{enumerate}
