@@ -1,0 +1,11 @@
+\begin{equation*}
+	\begin{split}
+		P(X + Y = n) 	&= \sum_{k=0}^{n} P(X = k) \cdot P(Y = n-k)\\
+						&= \sum_{k=0}^{n}\frac{{\lambda_{x}}^{k}}{k!}\cdot e^{-\lambda_x} \cdot \frac{{\lambda_{y}}^{n-k}}{(n-k)!}\cdot e^{-\lambda_{y}}\\
+						&= \sum_{k=0}^{n} \frac{1}{n!} \cdot \frac{n!}{(n-k)! k!} \cdot e^{-(\lambda_{x}+\lambda_{y})}\cdot {\lambda_{x}}^{k}\cdot {\lambda_{y}}^{n-k}\\
+						&= \frac{1}{n!}e^{-(\lambda_{x}+ \lambda_{y})} \underbrace{\sum_{k=0}^{n} {n \choose k} {\lambda_{x}}^{k}{\lambda_{y}}^{n-k}}_{(\lambda_{x}+\lambda_{y})}\\	
+						\pushQED{\qed}
+						&= \frac{(\lambda_{x}+\lambda_{y})}{n!}e^{-(\lambda_{x}+\lambda_{y})}		\qedhere
+						\popQED
+	\end{split}
+\end{equation*}
