@@ -1,0 +1,115 @@
+\begin{enumerate}
+	\item[a)] Die Randwahrscheinlichkeiten für $X$ und $Y$, die Aufgrund der Symmetrie der Tabelle übereinstimmen, lauten:
+	\begin{equation*}
+		\begin{split}
+			P(X = 0) = P(Y = 0) &= \frac{1}{4}\\
+			P(X = 1) = P(Y = 1) &= \frac{1}{2}\\
+			P(X = 2) = P(Y = 2) &= \frac{1}{4}\\
+		\end{split}
+	\end{equation*}
+	Die Kovarianz berechnet sich nun wie folgt:
+	\begin{equation*}
+		\begin{split}
+			E[X] 	&= 0 \cdot P(X = 0) + 1 \cdot P(X = 1) + 2 \cdot P(X = 2)\\
+					&= 0 \cdot \frac{1}{4} + 1 \cdot \frac{1}{2} + 2 \cdot \frac{1}{4}\\
+					&= 1\\
+		\end{split}
+	\end{equation*}
+	Aufgrund der Symmetrie gilt $E(X) = 1 = E(Y)$.\\
+	Um die Kovarianz zu berechnen, verbleibt $E(X\cdot Y)$. $X \cdot Y$ kann die Werte $(0,2)$ annehmen. Für die Ergebnisse gelten folgende Wahrscheinlichkeiten
+	\begin{equation*}
+		\begin{split}
+			P(X \cdot Y = 0) 	&= P(X = 1, Y = 0) + P(X = 0, Y = 1)\\
+								&= \frac{1}{4} + \frac{1}{4}\\
+								&= \frac{1}{2}\\
+			P(X \cdot Y = 2)	&= P(X = 2, Y = 1) + P(X = 1, Y = 2)\\
+								&= \frac{1}{4} + \frac{1}{4}\\
+								&= \frac{1}{2}
+		\end{split}
+	\end{equation*}
+	Damit ergibt sich:
+	\begin{equation*}
+		\begin{split}
+			E[X \cdot Y]	&= 0 \cdot P(X \cdot Y = 0) + 2 \cdot P(X \cdot Y = 2)\\
+							&= 0 \cdot \frac{1}{2} + 2 \frac{1}{2}\\
+							&= 1
+		\end{split}
+	\end{equation*}
+	Die gesuchte Kovarianz beträgt somit:
+	\begin{equation*}
+		\begin{split}
+			Cov[X,Y]	&= E[X\cdot Y] - E[X] \cdot E[Y]\\
+						&= 1 - 1 \cdot 1\\
+						&= 0
+		\end{split}
+	\end{equation*}
+	\item[b)] Die einzelnen Randwahrscheinlichkeiten betragen
+	\begin{equation*}
+		\begin{split}
+			P(X = 0) = P(X = 1) = P(X = 2) = P(Y = 0) = P(Y = 1) = P(Y = 2) = \frac{1}{3}
+		\end{split}
+	\end{equation*}
+	Für die Erwartungswerte von $X$ und $Y$ gilt:
+	\begin{equation*}
+		\begin{split}
+			E[X]	&= 0 \cdot P(X = 0) + 1 \cdot P(X = 1) + 2 \cdot P(X = 2)\\
+					&= 0 \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 2 \cdot \frac{1}{3}\\
+					&= 1
+		\end{split}
+	\end{equation*}
+	Aufgrund der Symmetrie gilt $E[X] = 1 = E[Y]$.\\
+	$X \cdot Y$ kann die Werte $(0,1,4)$ annehmen. Dafür gelten folgende Wahrscheinlichkeiten:
+	\begin{equation*}
+		\begin{split}
+			P(X \cdot Y = 0) 	&= P(X = 0, Y = 0)\\
+								&= \frac{1}{3}\\
+			P(X \cdot Y = 1)	&= P(X = 1, Y = 1)\\
+								&= \frac{1}{3}\\
+			P(X \cdot Y = 4)	&= P(X = 2, Y = 2)\\
+								&= \frac{1}{3}
+		\end{split}
+	\end{equation*}
+	Daher beträgt der Erwartungswert:
+	\begin{equation*}
+		\begin{split}
+			E[X \cdot Y]	&= 0 \cdot P(X \cdot Y = 0) + 1 \cdot P(X \cdot Y = 1) + 4 \cdot P(X \cdot Y = 4)\\
+							&= 0 \cdot \frac{1}{3} + 1 \cdot \frac{1}{3} + 4 \cdot \frac{1}{3}\\
+							&= \frac{5}{3}
+		\end{split}
+	\end{equation*}
+	Die gesuchte Kovarianz beträgt somit:
+	\begin{equation*}
+		\begin{split}
+			Cov[X,Y]	&= E[X\cdot Y] - E[X] \cdot E[Y]\\
+						&= \frac{5}{3} - 1 \cdot 1\\
+						&= \frac{2}{3}
+		\end{split}
+	\end{equation*}
+	\item[c)] Die einzelnen Erwartungswerte betragen aufgrund der identischen Randwahrscheinlichkeiten unter b) und der bestehenden Symmetrie $E[X] = 1 = E[Y]$.\\
+	$X \cdot Y$ kann die Werte $(0,1)$ annehmen und es gelten die folgenden Wahrscheinlichkeiten:
+	\begin{equation*}
+		\begin{split}
+			P(X \cdot Y = 0)	&= P(X = 0, Y = 2) + P(X = 2, Y = 0)\\
+								&= \frac{1}{3} + \frac{1}{3}\\
+								&= \frac{2}{3}\\
+			P(X \cdot Y = 1)	&= P(X = 1, Y = 1)\\
+								&= \frac{1}{3}
+		\end{split}
+	\end{equation*}
+	Damit gilt für den Erwartungswert:
+	\begin{equation*}
+		\begin{split}
+			E[X \cdot Y]	&= 0 \cdot P(X \cdot Y = 0) + 1 \cdot P(X \cdot Y = 1)\\
+							&= 0 \cdot \frac{2}{3} + 1 \cdot \frac{1}{3}\\
+							&= \frac{1}{3}
+		\end{split}
+	\end{equation*}
+	Für die Kovarianz gilt somit:\\
+	\begin{equation*}
+		\begin{split}
+			Cov[X,Y]	&= E[X\cdot Y] - E[X] \cdot E[Y]\\
+						&= \frac{1}{3} - 1 \cdot 1\\
+						&= - \frac{2}{3}
+		\end{split}
+	\end{equation*}
+\end{enumerate}
