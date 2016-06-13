@@ -1,0 +1,29 @@
+Mit folgenden Wahrscheinlichkeiten wird gerechnet
+\begin{itemize}
+	\item Eine Frau entscheidet sich für Studiengang $P(A_f) = 0.8$ und sie entscheidet sich für Studiengang $P(B_f) = 0.2$ - da nur zwei Studiengänge angeboten werden.
+	\item Ein Mann entscheidet sich für Studiengang $P(A_m) = 0.3$ und er entscheidet sich für Studiengang $P(B_m) = 0.7$ - da nur zwei Studiengänge angeboten werden.
+	\item Die Wahrscheinlichkeit, dass eine Frau in Studiengang $A$ aufgenommen wird $C_f$ beträgt $P(C_f|A_f) = 0.3$ und, dass sie in Studiengang $B$ aufgenommen wird beträgt $P(C_f|B_f) = 0.7$
+	\item Die Wahrscheinlichkeit, dass ein Mann in Studiengang $A$ aufgenommen wird $C_m$ beträgt $Ü(C_m|A_m) = 0.2$ und, dass er in Studiengang $B$ aufgenommen wird beträgt $P(C_m|B_m) = 0.7$ 
+\end{itemize}
+\begin{enumerate}
+	\item[a)]
+		Die Wahrscheinlichkeit, dass eine Frau einen Studienplatz in $A$ oder $B$ erhält beträgt
+		\begin{equation*}
+			\begin{split}
+				P(C_f) 	&= P(C_f|A_f) \cdot P(A_f) + P(C_f|B_f) \cdot P(B_f)\\
+						&= 0.3 \cdot 0.8 + 0.7 \cdot 0.2\\
+						&= 0.38
+			\end{split}
+		\end{equation*}
+		Die Wahrscheinlichkeit, dass ein Mann einen Studienplatz erhält, beträgt hingegen
+		\begin{equation*}
+			\begin{split}
+				P(C_m)	&= P(C_m|A_m) \cdot P(A_m) + P(C_m|B_m) \cdot P(B_m)\\
+						&= 0.2 \cdot 0.3 + 0.7 \cdot 0.7\\
+						&= 0.55
+			\end{split}
+		\end{equation*}
+		Damit erhalten Frauen mit einer Wahrscheinlichkeit von 38\% und Männer mit 55\% einen Studienplatz.
+	\item[b)] Der Satz der totalen Wahrscheinlichkeiten ist von der Berechnung aufgebaut wie die des Erwartungswertes. Es wird also die erwartete Erfolgswahrscheinlichkeit berechnet. Dem entsprechend geht jener Erfolg mit dem größten Gewicht in den Gesamtwert ein, die mit der größten Wahrscheinlichkeit für ihr Eintreten multipliziert wird.
+	Im Falle der Gruppe des weiblichen Geschlechts ist dies die geringere Erfolgswahrscheinlichkeit von $0.3$ für den Studiengang $A$, wohin gegen die deutliche Mehrheit der Männer Studiengang $B$ wählen, bei dem der Erfolg bei $0.7$ liegt. Die Erwartungswerte werden für Frauen also stärker in Richtung $0.3$ verzogen als zum höheren Wert $0.7$. Bei den Männern wird diese Wahrscheinlichkeit entsprechend stärker in Richtung $0.7$ verzogen. 
+\end{enumerate}
