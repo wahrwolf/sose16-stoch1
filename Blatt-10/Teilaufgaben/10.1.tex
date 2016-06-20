@@ -1,0 +1,102 @@
+\begin{enumerate}
+	\item[a)] Fall 1:	$P(Y_{n} = 0)$\\
+		\begin{equation*}
+			\begin{split}
+				|Y_n - E[Y_n]| &\ge \epsilon\\
+				|- \frac{n}{2}| &\ge \epsilon\\
+				\frac{n}{2} &\ge \epsilon\\
+			\end{split}
+		\end{equation*}
+			Fall 2:	$P(Y_n = n)$
+		\begin{equation*}
+			\begin{split}
+				|Y_n - E[Y_n]| &\ge \epsilon\\
+				|n - \frac{n}{2}| \ge \epsilon\\
+				\frac{n}{2} \ge \epsilon\\
+			\end{split}
+		\end{equation*} 
+		Damit muss $\epsilon \leq \frac{n}{2}$ gewählt werden.
+	\item[b)]
+		\begin{equation*}
+			\begin{split}
+				P(|Y_n - E[Y_n]|\ge \epsilon) 		&\leq \frac{Var[Y_n]}{\epsilon^2}\\
+				P(|Y_n - \frac{n}{2}|\ge \epsilon) 	&\leq \frac{\frac{n}{4}}{(\frac{n}{2})^2}\\
+													&\leq \frac{1}{n}\\
+			\end{split}
+		\end{equation*}
+		Gemäß der Aufgabenstellung sollen die Werte aus b) verwendet werden. Wir gingen an dieser Stelle davon aus, dass die Präsenzaufgabe 10.2 b) gemeint war. Entsprechend gilt nun $n = 4$
+		\begin{equation*}
+			\begin{split}
+				P(|Y_4 - 2|\ge 2) \leq \frac{1}{4}
+			\end{split}
+		\end{equation*}
+	\item[c)]
+		\begin{equation*}
+			\begin{split}
+				P(Y_n = 0) + P(Y_n = n)		&= B_{n, 0.5}(0) + B_{n, 0.5}(n)\\
+											&= {n \choose 0} (0.5)^0 (1-0.5)^{n-0} + {n \choose n} (0.5)^n (1-0.5)^{n-n}\\
+											&= 1 \cdot 1 \cdot 0.5^n + 1 \cdot 0.5^n \cdot 1\\
+											&= 2 \cdot 0.5^n\\
+											&= \frac{1}{2^{n-1}}= 2^{1-n}
+			\end{split}
+		\end{equation*}
+	\item[d)] Sei $f(x) = 2^{n - 1}$ der Nenner des exakten Ergebnisses und $g(x) = n$ der Nenner der Abschätzung.
+		\begin{equation*}
+			\lim\limits_{n\rightarrow \infty} |\frac{2^{n-1}}{n}| \stackrel{(*)}{=} \lim\limits_{n \rightarrow \infty} |\frac{n2^{n-2}}{1}| = \infty
+		\end{equation*}
+		Damit wächst der Nenner des exakten Ergebnisses schneller als der aus der Abschätzung. Die Abschätzung liefert damit insbesondere für große $n$ keine gute Annäherung.		
+\end{enumerate}
+
+
+%\begin{enumerate}
+%	\item[a)] 
+%		\begin{equation*}
+%			\begin{split}
+%				P(|Y_{n} - E[Y_{n}]| \ge \epsilon)	&= P(Y_{n} = 0) + P(Y_{n} = n)\\
+%										&= B_{n,0.5} (0) + B_{n,0.5} (4)\\
+%										&= {n\choose 0} (0.5)^{0} (1- 0.5)^{n - 0} + {n \choose n} (0.5)^{n} (1-0.5)^{n - n}\\
+%										&= 1 \cdot 1 \cdot 0.5^n + 1 \cdot 0.5^n \cdot 1\\
+%										&= 2 \cdot 0.5^n\\
+%			\end{split}
+%		\end{equation*} 
+%		\begin{equation*}
+%			\begin{split}
+%				\frac{Var[Y]}{\epsilon^2} 		&\ge 2 \cdot 0.5^n\\
+%				\frac{n}{4 \cdot \epsilon^2}	&\ge 2 \cdot 0.5^n\\
+%				\frac{n}{8 \cdot 0.5^n}			&\ge \epsilon^2\\
+%			\end{split}
+%		\end{equation*}
+%		Fall 1:
+%		\begin{equation*}
+%			\begin{split}
+%				\epsilon \ge \sqrt{\frac{n}{8 \cdot 0.5^n}}
+%			\end{split}
+%		\end{equation*}
+%		Fall 2:
+%		\begin{equation*}
+%			\begin{split}
+%				\epsilon \leq -\sqrt{\frac{n}{8 \cdot 0.5^n}}
+%			\end{split}
+%		\end{equation*}
+%		Fall 2 kann nicht eintreten, da gilt $\epsilon > 0$.
+%	\item[b)]
+%		\begin{equation*}
+%			\begin{split}
+%				\epsilon 	&\ge \sqrt{\frac{4}{8 \cdot 0.5^4}}\\
+%				\epsilon	&\ge \sqrt{8} \approx 2.8284\\
+%			\end{split}
+%		\end{equation*}
+%		Die Abschätzung mit der Tschebycheff-Ungleichung ergibt:
+%		\begin{equation*}
+%			\begin{split}
+%				P(|Y_{4}- 2 |\ge \sqrt{8}) &\leq \frac{1}{\sqrt{8}^2} = \frac{1}{8} 
+%			\end{split}
+%		\end{equation*}
+%	\item[c)] Weiterhin angenommen, die Werte aus b) gelten (insb. $n=4$), dann erhalten wir einen exakten Wert von:
+%		\begin{equation*}
+%			\begin{split}
+%				P(Y_4 = 0) + P(Y_4 = 4)	&= 2 \cdot 0.5^4 = \frac{1}{8}
+%			\end{split}
+%		\end{equation*}
+%	\item[d)]
+%\end{enumerate}
