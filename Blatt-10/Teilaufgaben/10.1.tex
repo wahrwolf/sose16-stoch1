@@ -40,9 +40,9 @@
 											&= \frac{1}{2^{n-1}}= 2^{1-n}
 			\end{split}
 		\end{equation*}
-	\item[d)] Sei $f(x) = 2^{n - 1}$ der Nenner des exakten Ergebnisses und $g(x) = n$ der Nenner der Abschätzung.
+	\item[d)] Sei $f(n) = 2^{n - 1}$ der Nenner des exakten Ergebnisses und $g(n) = n$ der Nenner der Abschätzung.
 		\begin{equation*}
-			\lim\limits_{n\rightarrow \infty} |\frac{2^{n-1}}{n}| \stackrel{(*)}{=} \lim\limits_{n \rightarrow \infty} |\frac{n2^{n-2}}{1}| = \infty
+			\lim\limits_{n \rightarrow \infty} |\frac{f(n)}{g(n)}| \lim\limits_{n\rightarrow \infty} |\frac{2^{n-1}}{n}| \stackrel{(*)}{=} \lim\limits_{n \rightarrow \infty} |\frac{n2^{n-2}}{1}| = \infty
 		\end{equation*}
 		Damit wächst der Nenner des exakten Ergebnisses schneller als der aus der Abschätzung. Die Abschätzung liefert damit insbesondere für große $n$ keine gute Annäherung.		
 \end{enumerate}
